@@ -39,7 +39,7 @@ document.getElementById('gyms-checkbox').checked = getFromStorage("displayGyms",
 document.getElementById('coverage-checkbox').checked = getFromStorage("displayCoverage", "true");
 
  
-$.getJSON("static/locales/pokemon.en.json").done(function(data) {
+$.getJSON("static/locales/pokemon."+locale+".json").done(function(data) {
     var pokeList = [];
 
     $.each(data, function(key, value) {

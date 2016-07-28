@@ -31,7 +31,8 @@ class Pogom(Flask):
         return render_template('map.html',
                                lat=SearchConfig.ORIGINAL_LATITUDE,
                                lng=SearchConfig.ORIGINAL_LONGITUDE,
-                               gmaps_key=config['GOOGLEMAPS_KEY'])
+                               gmaps_key=config['GOOGLEMAPS_KEY'],
+                               locale=config['LOCALE'])
 
     def map_data(self):
         d = {}

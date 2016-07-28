@@ -242,6 +242,13 @@ span.select2 { width: 100% !important; }
                     </p>
 
                     <p>
+                    <label for="notify-pokemon">
+                        Notification for Pokemon:
+                        <select id="notify-pokemon" multiple="multiple"></select>
+                    </label>
+                    </p>
+
+                    <p>
                         <a href="stats">View Stats</a>
                     </p>
 
@@ -256,6 +263,7 @@ span.select2 { width: 100% !important; }
     <script type="text/javascript">
         var center_lat = {{lat}};
         var center_lng = {{lng}};
+        var locale = "{{locale}}";
     </script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
