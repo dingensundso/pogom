@@ -55,6 +55,9 @@ class AuthPtc(Auth):
         except requests.exceptions.Timeout:
             self.log.error('Server timed out')
             return False
+        except requests.exceptions.ConnectionError:
+            self.log.error('Connection error')
+            return False
         
         try:
             jdata = json.loads(r.content.decode('utf-8'))
@@ -113,4 +116,3 @@ class AuthPtc(Auth):
         self._login = True
         
         return True
-        
