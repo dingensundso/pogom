@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import argparse_config
 import getpass
 import json
 import os
@@ -31,6 +32,8 @@ def get_args():
 
     parser.add_argument('-d', '--debug', type=str.lower, help='Debug Level [info|debug]', default=None)
     parser.add_argument('-c', '--pycurl', help='Use pycurl downloader (unstable)', action='store_true')
+
+    argparse_config.read_config_file(parser, os.path.expanduser("~/.pogomrc"))
 
     args = parser.parse_args()
     if args.password is None:
