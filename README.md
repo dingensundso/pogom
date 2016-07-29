@@ -33,7 +33,7 @@ The `-c` flag switches to pycurl (python wrapper around the libcurl library) as 
 - [x] Proper handling of server downtime (using exponential backoff strategy)
 - [x] Mobile friendly
 - [ ] Show/Hide Pokestops
-- [ ] Notifications
+- [x] Notifications
 
 ##TODO
  - Move processing of responses (protobuf parsing & save to DB) to seperate process
